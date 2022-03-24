@@ -1,9 +1,7 @@
 package main
 
-import (
-	"Server/api"
-)
+import "Server/api"
 
 func main() {
-	api.HandleRequests()
+	api.Start()
 }

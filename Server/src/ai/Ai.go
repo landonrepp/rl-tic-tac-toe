@@ -32,7 +32,7 @@ func HashGameBoard(board ticTacToe.GameBoard) int {
 	val := 0
 	counter := 0
 	for _, row := range board {
-		for j, _ := range row {
+		for j := range row {
 			val += int(row[j]) * int(math.Pow(3, float64(counter)))
 		}
 		counter++
@@ -136,7 +136,7 @@ func RunSimulations(xAi *Ai, oAi *Ai, numOfSimulations int) {
 // NewAi creates a new Ai. if forceSimulation is false, then it tries to pull the saved simulation from the file system
 func NewAi(numOfSimulations int) (xAi Ai, oAi Ai) {
 	stateValues := [NumOfStates]StateValue{}
-	for i, _ := range stateValues {
+	for i := range stateValues {
 		stateValues[i] = StateValue{
 			Confidence:      0,
 			ChanceOfVictory: .5,

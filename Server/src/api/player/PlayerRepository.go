@@ -1,6 +1,6 @@
-package repository
+package player
 
-type repository interface {
+type playerRepository interface {
 	GetPlayerById(id string)
-	SavePlayer(id string)
+	SavePlayer(Player string)
 }
